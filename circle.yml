@@ -1,0 +1,15 @@
+machine:
+  node:
+    version: 6
+  ruby:
+    version: 2.4.0
+  timezone:
+    Asia/Tokyo
+dependencies:
+  override:
+  - gem install github_changelog_generator
+deployment:
+  deploy:
+    branch: master
+    commands:
+      - ./scripts/generate_changelog.sh
